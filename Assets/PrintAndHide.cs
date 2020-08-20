@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Schema;
 using JetBrains.Annotations;
 using UnityEngine;
 
@@ -19,5 +20,15 @@ public class PrintAndHide : MonoBehaviour
     {
         Debug.Log(gameObject.name + ": " + i);
         i += 1;
+
+        if (i == 100 && tag == "Red")
+        {
+            gameObject.SetActive(false);
+        }
+        if (200 > i && i > 250 && tag == "Blue")
+        {
+            rend.enabled = false;
+
+        }
     }
 }
